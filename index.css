@@ -1575,7 +1575,7 @@
       .top-nav .container {
         width: min(1220px, 94vw);
         gap: 10px;
-        justify-content: flex-start;
+        justify-content: center;
       }
 
       .brand-logo {
@@ -1585,7 +1585,9 @@
       .nav-toggle {
         display: inline-flex;
         order: 1;
-        margin-right: 10px;
+        margin-right: 0;
+        position: absolute;
+        left: 0;
       }
 
       .brand-wrap {
