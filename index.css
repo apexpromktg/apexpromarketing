@@ -1682,6 +1682,10 @@
         justify-items: start;
       }
 
+      .hero-actions .hero-btn {
+        width: auto;
+      }
+
       .hero-btn {
         font-size: 16px;
         padding: 14px 18px;
@@ -1691,6 +1695,7 @@
         margin-left: 0;
         margin-top: 2px;
         justify-self: end;
+        margin-right: 0;
         width: max-content;
         min-width: 138px;
         padding: 13px 16px;
@@ -1845,10 +1850,15 @@
         justify-content: center;
       }
 
+      .hero-actions .hero-btn {
+        width: auto;
+      }
+
       .seo-outline {
         width: max-content;
         min-width: 138px;
         justify-self: end;
+        margin-left: auto;
       }
 
       .hero-actions {
