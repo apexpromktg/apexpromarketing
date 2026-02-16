@@ -2,6 +2,9 @@
       var contactForm = document.querySelector('.contact-form');
       var formStatus = document.querySelector('.form-status');
       var phoneField = contactForm ? contactForm.querySelector('input[name="phone"]') : null;
+      var topNav = document.querySelector('.top-nav');
+      var navToggle = document.querySelector('.nav-toggle');
+      var primaryNav = document.getElementById('primary-navigation');
       var stepLabel = contactForm ? contactForm.querySelector('.form-step-label') : null;
       var formSteps = contactForm ? contactForm.querySelectorAll('.form-step') : [];
       var nextStepButton = contactForm ? contactForm.querySelector('[data-next-step]') : null;
@@ -24,6 +27,34 @@
 
       function sanitizeText(value) {
         return value.replace(/[<>]/g, '').replace(/[\u0000-\u001F\u007F]/g, ' ').trim();
+      }
+
+      function closeMobileNav() {
+        if (!topNav || !navToggle) return;
+        topNav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+
+      if (topNav && navToggle && primaryNav) {
+        navToggle.addEventListener('click', function () {
+          var isOpen = topNav.classList.toggle('is-open');
+          navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        primaryNav.addEventListener('click', function (event) {
+          if (event.target && event.target.tagName === 'A') {
+            closeMobileNav();
+          }
+        });
+
+        document.addEventListener('click', function (event) {
+          if (window.innerWidth > 768) return;
+          if (!topNav.contains(event.target)) closeMobileNav();
+        });
+
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 768) closeMobileNav();
+        });
       }
 
       externalLinks.forEach(function (link) {

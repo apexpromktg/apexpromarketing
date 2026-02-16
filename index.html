@@ -21,11 +21,17 @@
 <body>
   <header class="top-nav">
     <div class="container">
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-controls="primary-navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <div class="brand-wrap" aria-label="Apex Pro Marketing logo">
         <img class="brand-logo" src="logo.jpg" alt="Apex Pro Marketing" />
       </div>
 
-      <ul class="nav-links">
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="#home">Home</a></li>
         <li><a href="#process">How It Works</a></li>
         <li><a href="#services">Services</a></li>
