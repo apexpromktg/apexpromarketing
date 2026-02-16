@@ -1525,3 +1525,247 @@
         padding: 14px;
       }
     }
+
+    @media (max-width: 768px) {
+      :root {
+        --section-pad: 56px;
+        --section-pad-lg: 68px;
+      }
+
+      .top-nav {
+        padding: 12px 0 14px;
+      }
+
+      .top-nav .container {
+        width: min(1220px, 94vw);
+        gap: 10px;
+      }
+
+      .brand-logo {
+        width: min(220px, 62vw);
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 10px 16px;
+        font-size: 14px;
+      }
+
+      .btn-quote {
+        font-size: 14px;
+        padding: 11px 14px;
+        border-radius: 10px;
+      }
+
+      .hero {
+        padding: 34px 0 114px;
+      }
+
+      .hero::after {
+        height: 138px;
+        bottom: -84px;
+      }
+
+      .hero .container {
+        gap: 26px;
+        transform: none;
+      }
+
+      .hero-copy {
+        max-width: none;
+      }
+
+      .hero-copy h1 {
+        font-size: clamp(30px, 9vw, 44px);
+        margin-bottom: 18px;
+        max-width: 14ch;
+        letter-spacing: -1.1px;
+      }
+
+      .hero-copy p {
+        font-size: 16px;
+        margin-bottom: 22px;
+      }
+
+      .hero-actions {
+        gap: 10px;
+      }
+
+      .hero-btn {
+        font-size: 16px;
+        padding: 14px 18px;
+      }
+
+      .seo-outline {
+        margin-left: 0;
+        padding: 14px 18px;
+        font-size: 15px;
+      }
+
+      .hero-media {
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
+        aspect-ratio: 4 / 3;
+        border-radius: 18px;
+      }
+
+      .process-head,
+      .services-head,
+      .about-head,
+      .reasons-head,
+      .industries-head,
+      .faq-head {
+        margin-bottom: 36px;
+      }
+
+      .process-head h2,
+      .services-head h2,
+      .about-head h2,
+      .reasons-head h2,
+      .industries-head h2,
+      .faq-head h2,
+      .contact-copy h2 {
+        font-size: clamp(30px, 9vw, 42px);
+        letter-spacing: -0.8px;
+      }
+
+      .process-step {
+        padding: 4px 4px 8px;
+      }
+
+      .step-badge {
+        width: 78px;
+        height: 78px;
+        font-size: 34px;
+        margin-bottom: 16px;
+      }
+
+      .process-step h3,
+      .reason-item h3,
+      .industry-content h3,
+      .about-copy h3 {
+        font-size: 26px;
+      }
+
+      .service-card {
+        min-height: 240px;
+        padding: 22px 18px 20px;
+      }
+
+      .service-card h3 {
+        font-size: 20px;
+      }
+
+      .about-media {
+        max-width: 300px;
+      }
+
+      .about-copy p,
+      .reason-item p,
+      .industry-content p,
+      .contact-copy p,
+      .faq-head p {
+        font-size: 15px;
+      }
+
+      .reasons-media {
+        min-height: 240px;
+      }
+
+      .reason-item {
+        grid-template-columns: 34px 1fr;
+        gap: 12px;
+      }
+
+      .industry-card {
+        min-height: 196px;
+      }
+
+      .industry-content {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+      }
+
+      .contact-card {
+        padding: 18px;
+      }
+
+      .contact-form {
+        gap: 12px;
+      }
+
+      .faq-item summary {
+        font-size: 16px;
+        padding: 14px 14px;
+      }
+
+      .faq-answer {
+        padding: 0 14px 14px;
+      }
+
+      .footer-brand img {
+        width: min(220px, 64vw);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .top-nav {
+        padding: 10px 0 12px;
+      }
+
+      .brand-logo {
+        width: min(190px, 58vw);
+      }
+
+      .nav-links {
+        font-size: 13px;
+        gap: 8px 12px;
+      }
+
+      .btn-quote {
+        width: 100%;
+        max-width: 210px;
+      }
+
+      .hero {
+        padding: 24px 0 102px;
+      }
+
+      .hero-copy h1 {
+        font-size: clamp(28px, 10vw, 38px);
+      }
+
+      .hero-btn,
+      .seo-outline {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-actions {
+        width: 100%;
+      }
+
+      .about-point strong {
+        font-size: 40px;
+      }
+
+      .industry-card {
+        min-height: 182px;
+      }
+
+      .contact-card {
+        padding: 14px;
+      }
+
+      .modal-head {
+        padding: 12px;
+      }
+
+      .modal-body {
+        padding: 12px;
+        font-size: 13px;
+      }
+    }
