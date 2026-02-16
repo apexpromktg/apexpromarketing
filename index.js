@@ -35,6 +35,10 @@
         navToggle.setAttribute('aria-expanded', 'false');
       }
 
+      function isMobileNavActive() {
+        return !!(navToggle && window.getComputedStyle(navToggle).display !== 'none');
+      }
+
       if (topNav && navToggle && primaryNav) {
         navToggle.addEventListener('click', function () {
           var isOpen = topNav.classList.toggle('is-open');
@@ -48,12 +52,12 @@
         });
 
         document.addEventListener('click', function (event) {
-          if (window.innerWidth > 768) return;
+          if (!isMobileNavActive()) return;
           if (!topNav.contains(event.target)) closeMobileNav();
         });
 
         window.addEventListener('resize', function () {
-          if (window.innerWidth > 768) closeMobileNav();
+          if (!isMobileNavActive()) closeMobileNav();
         });
       }
 
